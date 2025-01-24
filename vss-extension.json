@@ -23,6 +23,14 @@
     }
   ],
   "description": "An Azure DevOps task to run Retire.js.",
+  "links": {
+    "support": {
+      "uri": "https://github.com/elmahio/azure-devops-retire/issues"
+    },
+    "license": {
+      "uri": "https://github.com/elmahio/azure-devops-retire/blob/main/LICENSE"
+    }
+  },
   "categories": [
     "Azure Pipelines"
   ],
@@ -45,5 +53,8 @@
         "name": "tasks/retire"
       }
     }
+  ],
+  "galleryFlags": [
+    "Public"
   ]
 }
