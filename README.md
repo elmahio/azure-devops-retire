@@ -11,3 +11,12 @@ Select your organization and click the *Install* button.
 In the pipeline, search for 'retire' in the *Tasks* view and click the *Run Retire* search result.
 
 The task will run with default values for all options but you can tweak them if you like.
+
+The yaml code added by the task will look similar to this:
+
+```yaml
+- task: Retire@1
+  inputs:
+    verbose: false
+    failOnVulnerabilities: false
+```
