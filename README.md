@@ -1,6 +1,6 @@
 # Run Retire.js as part of a Pipeline
 
-This extension will let you call Retire.js as part of a Azure DevOps build pipeline. Detect JavaScript libraries with vulnerabilities as part of your build.
+This extension will let you call Retire.js as part of a Azure DevOps build pipeline. Detect JavaScript libraries with vulnerabilities as part of your build. All credits go back to the developers of [Retire.js](https://github.com/RetireJS/retire.js).
 
 ## Usage
 
