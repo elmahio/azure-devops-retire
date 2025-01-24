@@ -25,6 +25,15 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16 # Ensure the Node.js version matches your task runtime
+
+      - name: Install Dependencies
+        run: npm install
+        working-directory: tasks/retire
+
       - name: Patch vss-extension.json
         uses: onlyutkarsh/patch-files-action@v1.0.3
         with:
