@@ -1,0 +1,9 @@
+{
+    "name": "retire-task",
+    "version": "1.0.0",
+    "main": "index.js",
+    "dependencies": {
+      "azure-pipelines-task-lib": "^3.1.10"
+    }
+  }
+  

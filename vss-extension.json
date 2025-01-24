@@ -1,0 +1,49 @@
+{
+  "manifestVersion": 1,
+  "id": "retire-extension",
+  "name": "Retire.js",
+  "publisher": "elmahio",
+  "version": "1.0.8",
+  "tags": [
+    "javascript",
+    "security",
+    "scanner",
+    "build-tool",
+    "vulnerabilities",
+    "insecure-libraries"
+  ],
+  "content": {
+    "details": {
+      "path": "README.md"
+    }
+  },
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "description": "An Azure DevOps task to run Retire.js.",
+  "categories": [
+    "Azure Pipelines"
+  ],
+  "icons": {
+    "default": "images/icon128.png"
+  },
+  "files": [
+    {
+      "path": "tasks/retire"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "retire-task",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "tasks/retire"
+      }
+    }
+  ]
+}

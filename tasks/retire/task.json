@@ -1,0 +1,48 @@
+{
+    "id": "DD417893-E54E-46A7-ADA8-103D72267430",
+    "name": "Retire",
+    "friendlyName": "Run Retire",
+    "description": "Run Retire.js to check for vulnerabilities.",
+    "helpMarkDown": "Use this task to run Retire.js in your pipeline.",
+    "category": "Utility",
+    "visibility": ["Build", "Release"],
+    "author": "elmah.io",
+    "version": {
+      "Major": 1,
+      "Minor": 0,
+      "Patch": 8
+    },
+    "inputs": [
+        {
+            "name": "verbose",
+            "type": "boolean",
+            "label": "Verbose",
+            "defaultValue": false,
+            "required": false,
+            "helpMarkDown": "If selected, the --verbose parameter will be included in the Retire.js command."
+        },
+        {
+            "name": "path",
+            "type": "string",
+            "label": "Path",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "Optional. Specify a path to scan. If provided, the --path parameter will be included in the Retire.js command."
+        },
+        {
+            "name": "failOnVulnerabilities",
+            "type": "boolean",
+            "label": "Fail on Vulnerable Packages",
+            "defaultValue": false,
+            "required": false,
+            "helpMarkDown": "If selected, the build will fail on vulnerable packages (default Retire.js behavior). If not selected, --exitwith 0 will be added to the command to prevent failing."
+        }
+    ],
+    "instanceNameFormat": "Run Retire with options $(options)",
+    "execution": {
+      "Node16": {
+        "target": "index.js"
+      }
+    }
+  }
+  
