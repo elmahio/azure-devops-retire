@@ -43,7 +43,7 @@ jobs:
           fail-if-no-files-patched: true
 
       - name: TfxInstaller
-        uses: Maetis/github-action-tfxinstaller@v1
+        uses: Maetis/github-action-tfxinstaller@v1.0.0-pre
         
       - name: Build vsix
         run: tfx extension create --manifest-globs vss-extension.json
