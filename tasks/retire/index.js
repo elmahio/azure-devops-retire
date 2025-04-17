@@ -58,8 +58,7 @@ async function run() {
                             : 'none';
 
                         const message =
-`- Component: ${component}
-- Version: ${version}
+`- Version: ${version}
 - File: ${file}
 - Severity: ${severity}
 - CVEs: ${cves}
@@ -67,9 +66,9 @@ async function run() {
 
                         if (hasVulns) {
                             hasRealVulnerabilities = true;
-                            tl.warning(`Vulnerable library found:\n${message}`);
+                            tl.warning(`Vulnerable library found: ${component}\n${message}`);
                         } else if (verbose) {
-                            console.log(`Library matched but no known vulnerabilities:\n${message}`);
+                            console.log(`Library matched but no known vulnerabilities: ${component}\n${message}`);
                         }
                     }
                 }
