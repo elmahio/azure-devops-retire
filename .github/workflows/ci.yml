@@ -28,7 +28,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 16 # Ensure the Node.js version matches your task runtime
+          node-version: 20 # Ensure the Node.js version matches your task runtime
 
       - name: Install Dependencies
         run: npm install
