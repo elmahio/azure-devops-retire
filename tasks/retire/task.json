@@ -45,6 +45,9 @@
   "execution": {
     "Node20": {
       "target": "index.js"
+    },
+    "Node16": {
+      "target": "index.js"
     }
   }
 }
