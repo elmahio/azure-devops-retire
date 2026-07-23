@@ -43,10 +43,10 @@
   ],
   "instanceNameFormat": "Run Retire with options $(options)",
   "execution": {
-    "Node20": {
+    "Node20_1": {
       "target": "index.js"
     },
-    "Node16": {
+    "Node20": {
       "target": "index.js"
     }
   }
