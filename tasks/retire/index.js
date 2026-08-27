@@ -8,18 +8,18 @@ async function run() {
         const failOnVulnerabilities = tl.getBoolInput('failOnVulnerabilities', false);
 
         // Construct the retire command
-        let command = 'retire --outputformat json';
+        const args = ['--outputformat', 'json'];
 
         if (verbose) {
-            command += ' --verbose';
+            args.push('--verbose');
         }
 
         if (path) {
-            command += ` --path ${path}`;
+            args.push('--path', path);
         }
 
         if (!failOnVulnerabilities) {
-            command += ' --exitwith 0';
+            args.push('--exitwith', '0');
         }
 
         // Install Retire.js
@@ -27,8 +27,8 @@ async function run() {
         await tl.exec('npm', ['install', '-g', 'retire'], {silent: true});
 
         // Run Retire.js and capture output
-        tl.debug(`Executing command: ${command}`);
-        const result = tl.execSync('sh', ['-c', command], {silent: true});
+        tl.debug(`Executing retire with args: ${args.join(' ')}`);
+        const result = tl.execSync('retire', args, {silent: true});
 
         const stdout = result.stdout?.toString() || '';
         let hasRealVulnerabilities = false;
